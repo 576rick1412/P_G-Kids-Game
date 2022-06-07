@@ -6,6 +6,16 @@ using UnityEngine.Playables;
 public class Play_Button : MonoBehaviour
 {
     public PlayableDirector LOGO_Anime;
+
+    void Update()
+    {
+     if(Input.anyKey)
+        {
+            LOGO_Anime.gameObject.SetActive(true);
+            LOGO_Anime.Play();
+            Invoke("late_b", 1.1f);
+        }
+    }
     public void play_b()
     {
         LOGO_Anime.gameObject.SetActive(true);
