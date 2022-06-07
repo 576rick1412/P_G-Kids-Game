@@ -11,15 +11,12 @@ public class Animal_Mover : MonoBehaviour
     public int[] ward;
     public bool[] cheak;
 
-    private int ON_Num = 0; 
-
     public GameObject[] GameObject;
     public GameObject[] target;
     Vector2[] target_POS = new Vector2[5];
 
     void Start()
     {
-        ON_Num = 0;
 
         for (int i = 0; i < Ward_Num; i++)
         {
