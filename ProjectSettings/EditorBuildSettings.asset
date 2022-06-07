@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Title_Scene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Main_Scene.unity
+    guid: 043840702dbebba41ae92c8e6101bf33
+  - enabled: 1
+    path: Assets/Scenes/Animal_Game/AnimalGame_Hub.unity
+    guid: df47861563c109840a63f2a1c84bbecb
+  - enabled: 1
+    path: Assets/Scenes/Animal_Game/AnimalGame_1.unity
+    guid: 585ea5eef62751e4593a9bf54f05d6b9
+  - enabled: 1
+    path: Assets/Scenes/Animal_Game/AnimalGame_2.unity
+    guid: c3fafa0b1101c9c409782f1291a3e7e3
+  - enabled: 1
+    path: Assets/Scenes/Animal_Game/AnimalGame_3.unity
+    guid: e893a72d86c1c0c44a720f9c48fe4ca9
+  - enabled: 1
+    path: Assets/Scenes/AppleGame/AppleGame_Hub.unity
+    guid: 8aed9a321f2994d48a49fa31c2aafc38
+  - enabled: 1
+    path: Assets/Scenes/AppleGame/AppleGame_1.unity
+    guid: 2f157223db1325843bf5a0f789462ca2
+  - enabled: 1
+    path: Assets/Scenes/AppleGame/AppleGame_2.unity
+    guid: 09137460f45357947877e719aa8fe538
+  - enabled: 1
+    path: Assets/Scenes/AppleGame/AppleGame_3.unity
+    guid: d9ef04374aafb7444be36ca27990c77a
+  - enabled: 1
+    path: Assets/Scenes/MedicGame/MedicGame_Hub.unity
+    guid: c7a573308f6d34441bf2318e579cd370
+  - enabled: 1
+    path: Assets/Scenes/MedicGame/MedicGame_1.unity
+    guid: ad9299de4ec943546916d4b95f62b45d
+  - enabled: 1
+    path: Assets/Scenes/MedicGame/MedicGame_2.unity
+    guid: 6f3e50fb7f64a4e4b84b184efb00cd31
+  - enabled: 1
+    path: Assets/Scenes/MedicGame/MedicGame_3.unity
+    guid: 325c19caa9ab085439048f124b39c292
+  - enabled: 1
+    path: Assets/Scenes/Puzzle_Geme/PuzzleGame_Hub.unity
+    guid: 9ff06c64e17d77e46b266b1a43a01e8c
+  - enabled: 1
+    path: Assets/Scenes/Puzzle_Geme/PuzzleGame_1.unity
+    guid: c24a9b658d39c13458bccd25d73662d7
+  - enabled: 1
+    path: Assets/Scenes/Puzzle_Geme/PuzzleGame_2.unity
+    guid: 24ef7c755545ef342ae4ab46b1130df4
+  - enabled: 1
+    path: Assets/Scenes/Puzzle_Geme/PuzzleGame_3.unity
+    guid: 43913caa744586a45987af53ab96d256
+  m_configObjects: {}
