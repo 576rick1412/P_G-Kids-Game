@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Medical_Manager : MonoBehaviour
 {
+    [SerializeField]
+    private float Null_Num = 0;
+
     public int Medical_Num = 0;
 
     public GameObject[] Medical;
@@ -19,6 +22,8 @@ public class Medical_Manager : MonoBehaviour
 
     void Start()
     {
+        Null_Num = Screen.height / 12f;
+
         if (Medical.Length == 2)
         {
             Medicalpos_0 = Medical[0].transform.position;
@@ -98,7 +103,7 @@ public class Medical_Manager : MonoBehaviour
         for (int j = 0; j < 5; j++)
         {
             float Distance0 = Vector3.Distance(Medical[i].transform.position, Medical_Black[j].transform.position);
-            if (Distance0 < 200)
+            if (Distance0 < Null_Num)
             { Medical[i].SetActive(false); Medical_Num++; return; }
         }
         Medical[i].transform.position = Medicalpos_0;
@@ -110,7 +115,7 @@ public class Medical_Manager : MonoBehaviour
         for (int j = 0; j < 5; j++)
         {
             float Distance0 = Vector3.Distance(Medical[i].transform.position, Medical_Black[j].transform.position);
-            if (Distance0 < 200)
+            if (Distance0 < Null_Num)
             { Medical[i].SetActive(false); Medical_Num++; return; }
         }
         Medical[i].transform.position = Medicalpos_1;
@@ -122,7 +127,7 @@ public class Medical_Manager : MonoBehaviour
         for (int j = 0; j < 5; j++)
         {
             float Distance0 = Vector3.Distance(Medical[i].transform.position, Medical_Black[j].transform.position);
-            if (Distance0 < 200)
+            if (Distance0 < Null_Num)
             { Medical[i].SetActive(false); Medical_Num++; return; }
         }
         Medical[i].transform.position = Medicalpos_2;
@@ -134,7 +139,7 @@ public class Medical_Manager : MonoBehaviour
         for (int j = 0; j < 5; j++)
         {
             float Distance0 = Vector3.Distance(Medical[i].transform.position, Medical_Black[j].transform.position);
-            if (Distance0 < 200)
+            if (Distance0 < Null_Num)
             { Medical[i].SetActive(false); Medical_Num++; return; }
         }
         Medical[i].transform.position = Medicalpos_3;
@@ -146,7 +151,7 @@ public class Medical_Manager : MonoBehaviour
         for (int j = 0; j < 5; j++)
         {
             float Distance0 = Vector3.Distance(Medical[i].transform.position, Medical_Black[j].transform.position);
-            if (Distance0 < 200)
+            if (Distance0 < Null_Num)
             { Medical[i].SetActive(false); Medical_Num++; return; }
         }
         Medical[i].transform.position = Medicalpos_4;

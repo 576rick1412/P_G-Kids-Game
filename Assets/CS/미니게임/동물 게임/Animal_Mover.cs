@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Animal_Mover : MonoBehaviour
 {
-    [Header("가변적 빈칸 크기")]
-    public float Null_Num = 0;
+    private float Null_Num = 0;
 
     [Header("단어수")]
     public int Ward_Num;
@@ -20,7 +19,6 @@ public class Animal_Mover : MonoBehaviour
 
     void Start()
     {
-        Null_Num = 0;
         Null_Num = Screen.height / 4.7f;
 
         for (int i = 0; i < Ward_Num; i++)
