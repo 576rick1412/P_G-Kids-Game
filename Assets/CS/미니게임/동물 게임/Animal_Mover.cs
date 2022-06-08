@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Animal_Mover : MonoBehaviour
 {
+    [Header("가변적 빈칸 크기")]
+    public float Null_Num = 0;
+
     [Header("단어수")]
     public int Ward_Num;
 
@@ -17,6 +20,8 @@ public class Animal_Mover : MonoBehaviour
 
     void Start()
     {
+        Null_Num = 0;
+        Null_Num = Screen.height / 4.7f;
 
         for (int i = 0; i < Ward_Num; i++)
         {
@@ -80,7 +85,7 @@ public class Animal_Mover : MonoBehaviour
     public void DropAnimal_0()
     {
         float Distance = Vector3.Distance(GameObject[0].transform.position, target[ward[0]].transform.position);
-        if (Distance < 250)
+        if (Distance < Null_Num)
         {
             GameObject[0].transform.position = target[ward[0]].transform.position;
             cheak[0] = true;
@@ -93,7 +98,7 @@ public class Animal_Mover : MonoBehaviour
     public void DropAnimal_1()
     {
         float Distance = Vector3.Distance(GameObject[1].transform.position, target[ward[1]].transform.position);
-        if (Distance < 250)
+        if (Distance < Null_Num)
         {
             GameObject[1].transform.position = target[ward[1]].transform.position;
             cheak[1] = true;
@@ -106,7 +111,7 @@ public class Animal_Mover : MonoBehaviour
     public void DropAnimal_2()
     {
         float Distance = Vector3.Distance(GameObject[2].transform.position, target[ward[2]].transform.position);
-        if (Distance < 250)
+        if (Distance < Null_Num)
         {
             GameObject[2].transform.position = target[ward[2]].transform.position;
             cheak[2] = true;
@@ -119,7 +124,7 @@ public class Animal_Mover : MonoBehaviour
     public void DropAnimal_3()
     {
         float Distance = Vector3.Distance(GameObject[3].transform.position, target[ward[3]].transform.position);
-        if (Distance < 250)
+        if (Distance < Null_Num)
         {
             GameObject[3].transform.position = target[ward[3]].transform.position;
             cheak[3] = true;
@@ -132,7 +137,7 @@ public class Animal_Mover : MonoBehaviour
     public void DropAnimal_4()
     {
         float Distance = Vector3.Distance(GameObject[4].transform.position, target[ward[4]].transform.position);
-        if (Distance < 250)
+        if (Distance < Null_Num)
         {
             GameObject[4].transform.position = target[ward[4]].transform.position;
             cheak[4] = true;
