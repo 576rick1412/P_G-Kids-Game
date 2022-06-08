@@ -19,7 +19,7 @@ public class Animal_Mover : MonoBehaviour
 
     void Start()
     {
-        Null_Num = Screen.height / 5f;
+        Null_Num = Screen.height / 5.6f;
 
         for (int i = 0; i < Ward_Num; i++)
         {
