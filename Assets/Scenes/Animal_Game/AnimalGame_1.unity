@@ -1233,8 +1233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b066703067f614daa7bd47217cde9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Null_Object: {fileID: 1584285574}
-  Null_Num: 0
   Ward_Num: 2
   ward: 0100000000000000
   cheak: 0000

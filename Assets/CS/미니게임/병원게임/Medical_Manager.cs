@@ -5,9 +5,9 @@ using UnityEngine;
 public class Medical_Manager : MonoBehaviour
 {
     [SerializeField]
-    private float Null_Num = 0;
+    private float Null_Num = 0; // 드롭 좌표 범위
 
-    public int Medical_Num = 0;
+    public int Medical_Num = 0; //성공한 알약수
 
     public GameObject[] Medical;
     public GameObject[] Medical_Black;
@@ -102,6 +102,7 @@ public class Medical_Manager : MonoBehaviour
 
         for (int j = 0; j < 5; j++)
         {
+            // 알약(Medical)과 약접시좌표(Medical_Black)의 거리가 Null_Num보다 작다면 true 멀다면 false
             float Distance0 = Vector3.Distance(Medical[i].transform.position, Medical_Black[j].transform.position);
             if (Distance0 < Null_Num)
             { Medical[i].SetActive(false); Medical_Num++; return; }

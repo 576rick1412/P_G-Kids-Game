@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class berger_Button : MonoBehaviour
 {
-    public GameObject UI_Window;
+    public GameObject UI_Window; // 설정창
     public bool on_off = false;
 
     void Start()
@@ -15,6 +15,7 @@ public class berger_Button : MonoBehaviour
 
     public void MakeWindow()
     {
+        //on_off가 false면 꺼진 상태, true면 켜진상태
         if (on_off == false)
         {
             on_off = true;

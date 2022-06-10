@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class Animal_Mover : MonoBehaviour
 {
-    private float Null_Num = 0;
+    private float Null_Num = 0; // 드롭 좌표 범위
 
     [Header("단어수")]
-    public int Ward_Num;
+    public int Ward_Num; // 오브젝트 수 , target_POS가 꼬이지 않도록 수 조정
 
     [Header("단어 순서")]
-    public int[] ward;
-    public bool[] cheak;
+    public int[] ward; // 순서가 바뀌었을 때 오브젝트가 제대로 가도록
+    public bool[] cheak; // 드롭 확인용
 
-    public GameObject[] GameObject;
-    public GameObject[] target;
+    public GameObject[] GameObject; //글자박스
+    public GameObject[] target; // 빈칸
     Vector2[] target_POS = new Vector2[5];
 
     void Start()
     {
-        Null_Num = Screen.height / 5.6f;
+        Null_Num = Screen.height / 5.6f; //화면 비율이 비례해서 범위가 바뀌기 위해
 
         for (int i = 0; i < Ward_Num; i++)
         {
@@ -82,6 +82,7 @@ public class Animal_Mover : MonoBehaviour
     // =====================================================================
     public void DropAnimal_0()
     {
+        // 글자박스(GameObject)와 빈칸좌표(target)의 ward[n]번쨰와의 거리가 Null_Num보다 작다면 true 멀다면 false
         float Distance = Vector3.Distance(GameObject[0].transform.position, target[ward[0]].transform.position);
         if (Distance < Null_Num)
         {
@@ -95,6 +96,7 @@ public class Animal_Mover : MonoBehaviour
     }
     public void DropAnimal_1()
     {
+        // 
         float Distance = Vector3.Distance(GameObject[1].transform.position, target[ward[1]].transform.position);
         if (Distance < Null_Num)
         {

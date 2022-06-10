@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Playables;
 public class Play_Button : MonoBehaviour
 {
-    public PlayableDirector LOGO_Anime;
+    public PlayableDirector LOGO_Anime; //타임라인 불러오기
 
     void Update()
     {
