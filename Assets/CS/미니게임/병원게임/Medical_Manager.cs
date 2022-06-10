@@ -14,36 +14,16 @@ public class Medical_Manager : MonoBehaviour
 
     public GameObject[] setMedical;
 
-    Vector2 Medicalpos_0;
-    Vector2 Medicalpos_1;
-    Vector2 Medicalpos_2;
-    Vector2 Medicalpos_3;
-    Vector2 Medicalpos_4;
+    [Header("단어수")]
+    Vector2[] Medicalpos = new Vector2[5];
 
     void Start()
     {
         Null_Num = Screen.height / 12f;
 
-        if (Medical.Length == 2)
+        for (int i = 0; i < Medical.Length; i++)
         {
-            Medicalpos_0 = Medical[0].transform.position;
-            Medicalpos_1 = Medical[1].transform.position;
-        }
-
-        if (Medical.Length == 3)
-        {
-            Medicalpos_0 = Medical[0].transform.position;
-            Medicalpos_1 = Medical[1].transform.position;
-            Medicalpos_2 = Medical[2].transform.position;
-        }
-
-        if (Medical.Length == 5)
-        {
-            Medicalpos_0 = Medical[0].transform.position;
-            Medicalpos_1 = Medical[1].transform.position;
-            Medicalpos_2 = Medical[2].transform.position;
-            Medicalpos_3 = Medical[3].transform.position;
-            Medicalpos_4 = Medical[4].transform.position;
+            Medicalpos[i] = Medical[i].transform.position;
         }
 
         for(int i = 0; i < setMedical.Length; i++)
@@ -77,29 +57,54 @@ public class Medical_Manager : MonoBehaviour
 
     public void DragMedical_0()
     {
-        Medical[0].transform.position = Input.mousePosition;
+        DragMedical(0);
     }
     public void DragMedical_1()
     {
-        Medical[1].transform.position = Input.mousePosition;
+        DragMedical(1);
     }
     public void DragMedical_2()
     {
-        Medical[2].transform.position = Input.mousePosition;
+        DragMedical(2);
     }
     public void DragMedical_3()
     {
-        Medical[3].transform.position = Input.mousePosition;
+        DragMedical(3);
     }
     public void DragMedical_4()
     {
-        Medical[4].transform.position = Input.mousePosition;
+        DragMedical(4);
     }
+
     // =====================================================================
+
     public void DropMedical_0()
     {
-        int i = 0;
+        DropMedical(0);
+    }
+    public void DropMedical_1()
+    {
+        DropMedical(1);
+    }
+    public void DropMedical_2()
+    {
+        DropMedical(2);
+    }
+    public void DropMedical_3()
+    {
+        DropMedical(3);
+    }
+    public void DropMedical_4()
+    {
+        DropMedical(4);
+    }
+    public void DragMedical(int x)
+    {
+        Medical[x].transform.position = Input.mousePosition;
+    }
 
+    public void DropMedical(int i)
+    {
         for (int j = 0; j < 5; j++)
         {
             // 알약(Medical)과 약접시좌표(Medical_Black)의 거리가 Null_Num보다 작다면 true 멀다면 false
@@ -107,54 +112,6 @@ public class Medical_Manager : MonoBehaviour
             if (Distance0 < Null_Num)
             { Medical[i].SetActive(false); Medical_Num++; return; }
         }
-        Medical[i].transform.position = Medicalpos_0;
-    }
-    public void DropMedical_1()
-    {
-        int i = 1;
-
-        for (int j = 0; j < 5; j++)
-        {
-            float Distance0 = Vector3.Distance(Medical[i].transform.position, Medical_Black[j].transform.position);
-            if (Distance0 < Null_Num)
-            { Medical[i].SetActive(false); Medical_Num++; return; }
-        }
-        Medical[i].transform.position = Medicalpos_1;
-    }
-    public void DropMedical_2()
-    {
-        int i = 2;
-
-        for (int j = 0; j < 5; j++)
-        {
-            float Distance0 = Vector3.Distance(Medical[i].transform.position, Medical_Black[j].transform.position);
-            if (Distance0 < Null_Num)
-            { Medical[i].SetActive(false); Medical_Num++; return; }
-        }
-        Medical[i].transform.position = Medicalpos_2;
-    }
-    public void DropMedical_3()
-    {
-        int i = 3;
-
-        for (int j = 0; j < 5; j++)
-        {
-            float Distance0 = Vector3.Distance(Medical[i].transform.position, Medical_Black[j].transform.position);
-            if (Distance0 < Null_Num)
-            { Medical[i].SetActive(false); Medical_Num++; return; }
-        }
-        Medical[i].transform.position = Medicalpos_3;
-    }
-    public void DropMedical_4()
-    {
-        int i = 4;
-
-        for (int j = 0; j < 5; j++)
-        {
-            float Distance0 = Vector3.Distance(Medical[i].transform.position, Medical_Black[j].transform.position);
-            if (Distance0 < Null_Num)
-            { Medical[i].SetActive(false); Medical_Num++; return; }
-        }
-        Medical[i].transform.position = Medicalpos_4;
+        Medical[i].transform.position = Medicalpos[i];
     }
 }
